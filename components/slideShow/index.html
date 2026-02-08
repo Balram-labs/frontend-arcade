@@ -8,52 +8,57 @@
   </head>
   <body>
     <div class="slide-container">
-      <div class="slide">
-        <img
-          src="https://images.unsplash.com/photo-1589304402908-f49bf0765ad2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fG1vZGVsJTIwaW1hZ2VzfGVufDB8MHwwfHx8MA%3D%3D"
-          alt=""
-          srcset=""
-          
-        />
-        <div class="caption">Abx</div>
-      </div>
-      <div class="slide">
-        <img
-          src="https://images.unsplash.com/photo-1637422234670-392e0dc5bdc7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODF8fG1vZGVsJTIwaW1hZ2VzfGVufDB8MHwwfHx8MA%3D%3D"
-          alt=""
-          srcset=""
-        />
-        <div class="caption">Abx</div>
-      </div>
-      <div class="slide">
-        <img
-          src="https://media.istockphoto.com/id/2211896290/photo/portrait-of-a-sensual-woman-in-vibrant-blue-and-pink-neon-lighting-showcasing-modern-style.webp?a=1&b=1&s=612x612&w=0&k=20&c=oOISCJxXdC2FDvqoeRhZahf8OuULqQvDgEywKhh4irA="
-          alt=""
-          srcset=""
-        />
-        <div class="caption">Abx</div>
-      </div>
-       <div class="slide">
-        <img
-          src="https://media.istockphoto.com/id/2211896290/photo/portrait-of-a-sensual-woman-in-vibrant-blue-and-pink-neon-lighting-showcasing-modern-style.webp?a=1&b=1&s=612x612&w=0&k=20&c=oOISCJxXdC2FDvqoeRhZahf8OuULqQvDgEywKhh4irA="
-          alt=""
-          srcset=""
-        />
-        <div class="caption">Abx</div>
-      </div>
-       <div class="slide">
-        <img
-          src="https://media.istockphoto.com/id/2211896290/photo/portrait-of-a-sensual-woman-in-vibrant-blue-and-pink-neon-lighting-showcasing-modern-style.webp?a=1&b=1&s=612x612&w=0&k=20&c=oOISCJxXdC2FDvqoeRhZahf8OuULqQvDgEywKhh4irA="
-          alt=""
-          srcset=""
-        />
-        <div class="caption">Abx</div>
+      <div class="sliders">
+        <div class="slide fade">
+          <img
+            src="https://images.unsplash.com/photo-1589304402908-f49bf0765ad2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fG1vZGVsJTIwaW1hZ2VzfGVufDB8MHwwfHx8MA%3D%3D"
+            alt="Woman humanoid"
+            srcset=""
+          />
+          <div class="caption">HUMANOID</div>
+        </div>
+        <div class="slide fade">
+          <img
+            src="https://images.unsplash.com/photo-1637422234670-392e0dc5bdc7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODF8fG1vZGVsJTIwaW1hZ2VzfGVufDB8MHwwfHx8MA%3D%3D"
+            alt="Rosy environment"
+            srcset=""
+          />
+          <div class="caption">Rosy ENVIRONMENT</div>
+        </div>
+        <div class="slide fade">
+          <img
+            src="https://media.istockphoto.com/id/2211896290/photo/portrait-of-a-sensual-woman-in-vibrant-blue-and-pink-neon-lighting-showcasing-modern-style.webp?a=1&b=1&s=612x612&w=0&k=20&c=oOISCJxXdC2FDvqoeRhZahf8OuULqQvDgEywKhh4irA="
+            alt="Woman with gradient"
+            srcset=""
+          />
+          <div class="caption">Lady</div>
+        </div>
+        <div class="slide fade">
+          <img
+            src="https://images.unsplash.com/photo-1637793492728-0cb7af658e69?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Barn owl"
+            srcset=""
+          />
+          <div class="caption">Barn Owl</div>
+        </div>
+        <div class="slide fade">
+          <img
+            src="https://images.unsplash.com/photo-1505259839540-04105fcd8ba3?q=80&w=1094&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Fox"
+            srcset=""
+          />
+          <div class="caption">Foxy fox</div>
+        </div>
       </div>
       <div class="controls-num">
-        <div class="num">1</div>
-        <div class="num">2</div>
-        <div class="num">3</div>
+        <div class="num" onclick="currentSlider(1)"></div>
+        <div class="num" onclick="currentSlider(2)"></div>
+        <div class="num" onclick="currentSlider(3)"></div>
+        <div class="num" onclick="currentSlider(4)"></div>
+        <div class="num" onclick="currentSlider(5)"></div>
       </div>
+      <span class="fliper" id="previ" onclick="plus(-1)">&#10096;</span>
+      <span class="fliper" id="next" onclick="plus(1)">&#10097;</span>
     </div>
   </body>
   <script src="script.js"></script>

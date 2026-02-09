@@ -1,4 +1,6 @@
-*,*:after,*:before{
+*,
+*:after,
+*:before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -16,7 +18,6 @@ body {
 }
 
 .slide-container {
-  
   max-width: 30rem;
   min-width: 15rem;
   height: auto;
@@ -27,10 +28,10 @@ body {
   position: relative;
   min-width: 15rem;
 }
-.sliders{
+.sliders {
   width: 100%;
   height: 100%;
-  
+
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -42,7 +43,7 @@ body {
 }
 .slide {
   height: 100%;
-  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   padding: 1rem;
@@ -53,48 +54,43 @@ body {
   position: relative;
   border: 2px solid white;
   border-radius: 1rem;
-  mask-image: linear-gradient(0deg,transparent,pink,red 95%);
-  
+  mask-image: linear-gradient(0deg, transparent, pink, red 95%);
 }
 
 .slide img {
-   width: 100%;
-   aspect-ratio: 3/2;
+  width: 100%;
+  aspect-ratio: 3/2;
   object-fit: cover;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 1rem;
-  
+  box-shadow: 0px 0px 30px 2px rgba(255, 255, 255, 0.474);
 }
-.slide .caption{
+.slide .caption {
   position: absolute;
   bottom: 2rem;
   left: 50%;
   transform: translateX(-50%) translateY(200px);
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   width: 80%;
   align-self: center;
-  justify-self:  center;
+  justify-self: center;
   height: 5rem;
   background-color: rgba(255, 255, 255, 0.156);
   backdrop-filter: blur(1px);
   border-radius: 3rem;
   font-size: 2rem;
-  
 }
-.controls-num{
+.controls-num {
   display: flex;
   gap: 1rem;
   position: absolute;
   bottom: -2rem;
 }
-.controls-num .num{
-  
- 
-  
+.controls-num .num {
   width: 2rem;
   aspect-ratio: 1;
   display: flex;
@@ -103,15 +99,16 @@ body {
   border-radius: 100%;
   border: 5px solid rgb(8, 69, 69);
   background: rgb(229, 225, 231);
-  opacity: .6;
-  transition: .5s;
+  opacity: 0.6;
+  transition: 0.5s;
   cursor: pointer;
 }
-.controls-num .num:hover,.num:active{
+.controls-num .num:hover,
+.num:active {
   opacity: 1;
 }
 
-.fliper{
+.fliper {
   position: absolute;
   right: -3.5rem;
   background: white;
@@ -120,22 +117,21 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  color:rgb(13, 1, 37);
+  color: rgb(13, 1, 37);
   font-size: 2rem;
   padding: 1rem;
-  border-radius: .5rem;
-  opacity: .2;
-  transition: .5s;
+  border-radius: 0.5rem;
+  opacity: 0.2;
+  transition: 0.5s;
 }
-.fliper:hover{
-  opacity: .8;
-  
+.fliper:hover {
+  opacity: 0.8;
 }
-.fliper:active{
-  opacity: .8;
-  scale: .85;
+.fliper:active {
+  opacity: 0.8;
+  scale: 0.85;
 }
-#previ{
+#previ {
   left: -3.5rem;
 }
 .controls-num .num:hover,
@@ -149,7 +145,7 @@ body {
   color: white;
   opacity: 1;
 }
-.controls-num .num:nth-child(1).active{
+.controls-num .num:nth-child(1).active {
   background: rgb(8, 69, 69);
   border-color: white;
   color: white;
@@ -159,35 +155,48 @@ body {
 .fade {
   animation-name: fade;
   animation-duration: 1.5s;
-
 }
-.slide div.anima{
+.slide div.anima {
   animation: popIN 1.6s;
   animation-delay: 0s;
   transform: translateX(-50%) translateY(0px);
-  
 }
-@keyframes popIN{
-  from{
+@keyframes popIN {
+  from {
     transform: translateX(-50%) translateY(200px);
-  }to{
+  }
+  to {
     transform: translateX(-50%) translateY(0px);
   }
 }
 @keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-@media screen and (max-width: 768px){
-#previ{
-  left: 0rem;
+@media screen and (max-width: 768px) {
+  #previ {
+    left: 0rem;
+  }
+  #next {
+    right: 0rem;
+  }
+  .fliper{
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .slide .caption {
+    font-size: 1.4rem;
+    height: 3.5rem;
+  }
 }
-#next{
-  right: 0rem;
-}
-.slide .caption{
-  font-size: 1.4rem;
-  height: 3.5rem;
-}
+@media screen and (max-width: 360px){
+  .slide .caption {
+    font-size: 1.2rem;
+    height: 2.5rem;
+  }
 }

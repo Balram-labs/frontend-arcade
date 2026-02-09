@@ -1,16 +1,14 @@
 const captions = document.getElementsByClassName("caption");
-console.log(captions);
+
 let slideNumber = 1;
 function currentSlider(n) {
   slideNumber = n;
   slideShower(slideNumber);
-  
 }
 
 function plus(n) {
   slideNumber += n;
   slideShower(slideNumber);
-
 }
 
 function slideShower(n) {
@@ -23,7 +21,7 @@ function slideShower(n) {
   if (n > slides.length) {
     slideNumber = 1;
   }
-  
+
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
@@ -32,10 +30,19 @@ function slideShower(n) {
   }
   slides[slideNumber - 1].style.display = "block";
   dots[slideNumber - 1].classList.add("active");
-  captions[slideNumber -1].classList.add("anima");
-  
+  captions[slideNumber - 1].classList.add("anima");
 }
-setInterval(() => {
+const slideInterval = setInterval(() => {
   plus(1);
-}, 5000);
+}, 6000);
 slideShower(slideNumber);
+
+window.addEventListener("keydown", (e) => {
+  if (e.key === "ArrowRight") {
+    slideNumber += 1;
+  }
+  if (e.key === "ArrowLeft") {
+    slideNumber -= 1; 
+  }
+ slideShower(slideNumber);
+});
